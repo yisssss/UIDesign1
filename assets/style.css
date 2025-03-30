@@ -7,8 +7,10 @@
 /* adjusting fonts */
 
 body {
-	font-family: -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif;
+	color: red;
+	font-family: -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif, garamond;
 	transition: background 500ms ease;
+	background-color: #f0f0f0;
 }
 
 p, li {
@@ -58,3 +60,24 @@ body {
 #right-column {
 	background: #333;
 }*/
+
+
+pre {
+	position: absolute;
+	top: auto;
+	max-width: 30%;;
+	padding: 10px;
+	overflow: auto;
+	white-space: pre-wrap;
+}
+
+#light {
+	font-style: italic;
+ opacity: 30%;	
+}
+
+h1 {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-style: bold;
+	font-size: 48px;
+}
