@@ -2,6 +2,11 @@
 	margin:  0px;
 	padding:  0px;
 	box-sizing: border-box;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none
+
 }
 
 /* adjusting fonts */
@@ -10,7 +15,8 @@ body {
 	color: red;
 	font-family: -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif, garamond;
 	transition: background 500ms ease;
-	background-color: #f0f0f0;
+	background-color: rgb(230,230,230);
+
 }
 
 p, li {
@@ -37,30 +43,16 @@ img {
 	height:  auto;
 }
 
-/* uncomment the code below to set the grid */
-
-/*#grid {
+#grid {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }
 
-body {
-	overflow: hidden;
+.container{
+	position:absolute;
+	top:0;
+	z-index: 1;
 }
-
-.scroll {
-	padding:  20px;
-	overflow: scroll;
-	height: 100vh;
-}
-
-#left-column {
-}
-
-#right-column {
-	background: #333;
-}*/
-
 
 pre {
 	position: absolute;
@@ -80,4 +72,29 @@ h1 {
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	font-style: bold;
 	font-size: 48px;
+}
+
+#canvas-frame {
+	width: 1200px;
+	height: 900px;
+	position: relative;
+	z-index: -100;
+	overflow: hidden;
+  }
+
+  canvas {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+  }
+
+  .clickSand{
+	position: absolute;
+	bottom:50px;
+	left: 50%;
+	transform: translateX(-50%);
+	color: rgb(230,230,230);
+	z-index: 100;
+	font-size: 36px;
 }
