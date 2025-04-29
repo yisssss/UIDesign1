@@ -98,3 +98,367 @@ h1 {
 	z-index: 100;
 	font-size: 36px;
 }
+
+
+
+.scene {
+    position: fixed;
+	right:-200px; 
+    width: 880px;
+    height: 100vh;
+	z-index: -1;
+  }
+
+  
+  .metal-cup,
+  .pocari-can,
+  .cup-ramen,
+  .yellow-doll {
+    position: absolute;
+  }
+  .cup-ramen {
+    position: relative;
+    left: 45%;
+    top: 40%;
+    width: 150px;
+    height: 200px;
+    z-index: 10;
+  }
+  
+
+
+  .cup {
+    position: absolute;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 100%);
+    width: 100%;
+    height: 220px;
+    background: linear-gradient(to bottom, red, darkred);
+    border: none;
+    box-sizing: border-box;
+  }
+  
+  .lid {
+    position: absolute;
+    top: -10px;
+    width: 110%;
+    height: 20px;
+    background: red;
+    border-bottom: 3px solid ivory;
+    border-radius: 100%;
+    left: -5%;
+  }
+
+  .cup-bottom {
+    position: absolute;
+    top: 210px;
+    width: 80%;
+    height: 20px;
+    background: darkred;
+    border-bottom: 3px solid ivory;
+    border-radius: 100%;
+    left: 10%;
+  }
+  
+  
+  .steam {
+    position: absolute;
+    width: 10px;
+    height: 50px;
+    background: rgba(200, 200, 200, 0.6);
+    border-radius: 50%;
+    animation: rise 3s infinite ease-in-out;
+  }
+  
+  .steam1 { left: 40px; top: -40px; animation-delay: 0s; }
+  .steam2 { left: 70px; top: -50px; animation-delay: 0.5s; }
+  .steam3 { left: 100px; top: -40px; animation-delay: 1s; }
+  
+  @keyframes rise {
+    0% { transform: translateY(-40px) scale(1); opacity: 0.6; }
+    50% { transform: translateY(-60px) scale(1.2); opacity: 0.3; }
+    100% { transform: translateY(-80px) scale(0.8); opacity: 0; }
+  }
+  
+  .chopsticks {
+    position: absolute;
+    width: 120%;
+    height: 6px;
+    background: #f5d76e;
+    border-radius: 5px;
+    transform: rotate(20deg);
+  }
+  
+  .chopsticks1 { left: 0px; top: 0px; }
+  .chopsticks2 { left: -20px; top: 0px;     transform: rotate(18deg);
+  }
+
+
+
+
+
+  
+.pocari-can {
+    position: absolute;
+    left: 30%;
+    top: 35%;
+    width: 120px;
+    height: 240px;
+  }
+  
+  .can-body {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #004fbb, #5ba7f7); /* 파란 그라데이션 */
+    position: relative;
+    z-index: 1;
+  }
+
+  .can-bottom {
+    position: absolute;
+    top:230px;
+    width: 100%;
+    height: 20px;
+    background: #5ba7f7;
+    border-bottom: 3px solid #ccc;
+    border-radius: 100%;
+
+  }
+  
+  
+  .can-top {
+    position: absolute;
+    top:-10px;
+    width: 100%;
+    height: 20px;
+    background: #ccc;
+    border-bottom: 3px solid #004fbb;
+    border-radius: 100%;
+    z-index: 1;
+  }
+  
+  .pocari-label {
+    position: absolute;
+    top:30%;
+    left: -50%;
+    color: white;
+    font-size: 48px;
+    line-height: 1; /* 또는 90% 정도인 1.1~1.2 */
+
+    font-weight: bold;
+    transform: rotate(90deg);
+    z-index: 3;
+    clip-path: polygon(0 0, 100% 0, 100% 82%, 0 82%);
+  }
+
+
+  .metal-cup {
+    position: absolute;
+    left: 25%;
+    bottom: 30%;
+    width: 100px;
+    height: 200px;
+    z-index: 20;
+  }
+  
+  /* 윗부분 (컵 입구) */
+  .metal-cup-top {
+    position: relative;
+    left: -5%;
+    top:5%;
+    width: 110%;
+    height: 40px;
+    background: linear-gradient(to bottom, #666, #878787);
+    border-radius: 100%;
+    border-top: 3px solid #bbb;
+    z-index: 1;
+  }
+  
+  /* 중간 본체 */
+  .metal-cup-body1 {
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 90% 100%, 10% 110%);
+    top:-5%;
+    left:-5%;
+    width: 110%;
+    height: 36px;
+    background: linear-gradient(to bottom, #e0e0e0, #a0a0a0);
+    box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.2), inset 5px 0 10px rgba(255, 255, 255, 0.3);
+  }
+
+  .metal-cup-body1-bottom {
+    position: relative;
+    left: 5%;
+    top:-15%;
+    width: 90%;
+    height: 40px;
+    background: linear-gradient(to bottom, #a2a2a2, #878787);
+    border-radius: 100%;
+    border-top: 1px solid #999;
+    z-index: -1;
+  }
+
+  .metal-cup-body2 {
+    position: relative;
+    clip-path: polygon(10% 0, 90% 0, 87% 100%, 13% 100%);
+    top:-25%;
+    left:-6%;
+    width: 110%;
+    height: 76px;
+    background: linear-gradient(to bottom, #e0e0e0, #a0a0a0);
+    box-shadow: inset -5px 0 10px rgba(0, 0, 0, 0.2), inset 5px 0 10px rgba(255, 255, 255, 0.3);
+    z-index: -2;
+}
+  
+  /* 바닥 */
+  .metal-cup-bottom {
+    position: relative;
+    width: 80%;
+    height: 40px;
+    left:10%;
+    top:-35%;
+    background: linear-gradient(to top, #a0a0a0, #888888);
+    border-radius: 100%;
+    border-bottom: 3px solid #666;
+    z-index: -3;
+  }
+  
+
+  .yellow-doll {
+    position: absolute;
+    left: 6%;
+    bottom: 40%;
+    width: 300px;
+    height: 260px;
+    z-index: -20;
+  }
+  
+  /* 몸통 아래 */
+  .doll-body-bottom {
+    position: absolute;
+    width: 120px;
+    height: 100px;
+    background: linear-gradient(to top,rgb(255, 213, 0),#ffea00);
+    border-radius: 50%;
+    bottom: 10px;
+    left: 75px;
+  }
+
+  .doll-cap {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background: #ffea00;
+    border-radius: 50%;
+    top: 50px;
+    left: 30px;
+    transform: rotate(-20deg);
+
+  }
+
+  
+  /* 몸통 위 */
+  .doll-body-top {
+    position: absolute;
+    width: 150px;
+    height: 160px;
+    background: linear-gradient(to top,rgb(255, 213, 0),#ffea00);
+    border-radius: 50%;
+    top: 0;
+    left: 60px;
+  }
+  
+  /* 귀 */
+  .doll-ear {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background: rgb(255, 213, 0);
+    border-radius: 50%;
+    top: -10px;
+    left: 130px;
+  }
+  
+  /* 얼굴 */
+  .doll-face {
+    position: absolute;
+    width: 90px;
+    height: 110px;
+    background: #f5e9c5;
+    border-radius: 50%;
+    top: 45px;
+    left: 55px;
+    clip-path: polygon(0 20%, 60% 20%, 65% 100%, 10% 100%);
+
+  }
+  
+  /* 코 */
+  .doll-nose {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #f5e9c5;
+    border-radius: 50%;
+    top: 90px;
+    left: 28px;
+  }
+  
+  /* 눈 (흰자) */
+  .doll-eye-white {
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    top: 70px;
+    left: 65px;
+  }
+  
+  /* 눈 (검은자) */
+  .doll-eye-black {
+    position: absolute;
+    width: 10px;
+    height: 28px;
+    background: black;
+    border-radius: 50%;
+    top:5px;
+    left: px;
+  }
+  
+  /* 발 (왼쪽 아래) */
+  .doll-foot {
+    position: absolute;
+    width: 60px;
+    height: 80px;
+    background: linear-gradient(to bottom,#fff,#ccc);
+    border-radius: 50%;
+    bottom: -10px;
+    left: 30px;
+    transform: rotate(-20deg);
+
+  }
+  
+  /* 손 (앞쪽) */
+  .doll-hand {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(to bottom,#fff,#ccc);
+    border-radius: 50%;
+    bottom: -5px;
+    left: 90px;
+    z-index: 1;
+  }
+  
+  /* 들고 있는 물체 */
+  .doll-item {
+    position: absolute;
+    width: 50px;
+    height: 80px;
+    background: rgb(255, 213, 0);
+    top: 160px;
+    left: 110px;
+    border-radius: 30px;
+    transform: rotate(20deg);
+
+  }
+  
